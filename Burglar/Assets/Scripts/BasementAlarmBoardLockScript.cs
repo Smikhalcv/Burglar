@@ -11,6 +11,7 @@ public class BasementAlarmBoardLockScript : MonoBehaviour
     [SerializeField] Text slider3;
     [SerializeField] Text slider4;
     [SerializeField] GameObject sceneFail;
+    [SerializeField] GameObject sceneNext;
     [SerializeField] GameObject sceneCurrent;
     int[] sliders = new int[4];
     System.Random rnd = new System.Random();
@@ -52,6 +53,11 @@ public class BasementAlarmBoardLockScript : MonoBehaviour
                 break;
             }
             
+        }
+        if (sliders[0] == sliders[1] && sliders[1] == sliders[2] && sliders[2] == sliders[3])
+        {
+            sceneNext.SetActive(true);
+            sceneCurrent.SetActive(false);
         }
     }
 }
