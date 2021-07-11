@@ -23,6 +23,10 @@ public class StateMachine : MonoBehaviour
         
     }
     
+    /// <summary>
+    /// Переключает сцену на указанную закрывая предыдущую
+    /// </summary>
+    /// <param name="nextScene">Следующая сцена</param>
     public void ChangeScene(GameObject nextScene)
     {
         currectScene.SetActive(false);

@@ -7,6 +7,7 @@ public class HollwayTimerScript : MonoBehaviour
 {
     private float currectTime;
     public int timer;
+
     [SerializeField] GameObject nextScene;
     [SerializeField] GameObject currentScene;
     // Start is called before the first frame update

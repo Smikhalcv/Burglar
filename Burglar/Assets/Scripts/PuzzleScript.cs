@@ -7,11 +7,13 @@ public class PuzzleScript : MonoBehaviour
 {
     public Button[] buttons = new Button[9];
     public Sprite[] buttonColor = new Sprite[2];
+
     [SerializeField] GameObject nextScene;
     [SerializeField] GameObject currentScene;
     // Start is called before the first frame update
     void Start()
     {
+        // назначает всем кнопкам головоломки первый(красный) цвет
         for (int i = 0; i < buttons.Length; i++)
         {
             buttons[i].image.sprite = buttonColor[0];
@@ -21,16 +23,17 @@ public class PuzzleScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (buttons[0].image == buttonColor[1] &&
-            buttons[1].image == buttonColor[1] &&
-            buttons[2].image == buttonColor[1] &&
-            buttons[3].image == buttonColor[1] &&
-            buttons[4].image == buttonColor[1] &&
-            buttons[5].image == buttonColor[1] &&
-            buttons[6].image == buttonColor[1] &&
-            buttons[7].image == buttonColor[1] &&
-            buttons[8].image == buttonColor[1]
-            )
+        // проверяет соблюдения условия решения головоломки
+        if (buttons[0].image.sprite == buttonColor[1] &&
+            buttons[1].image.sprite == buttonColor[1] &&
+            buttons[2].image.sprite == buttonColor[1] &&
+            buttons[3].image.sprite == buttonColor[1] &&
+            buttons[4].image.sprite == buttonColor[1] &&
+            buttons[5].image.sprite == buttonColor[1] &&
+            buttons[6].image.sprite == buttonColor[1] &&
+            buttons[7].image.sprite == buttonColor[1] &&
+            buttons[8].image.sprite == buttonColor[1]
+        )
         {
             nextScene.SetActive(true);
             currentScene.SetActive(false);
