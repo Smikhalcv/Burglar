@@ -47,10 +47,6 @@ public class BasementAlarmBoardLockScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time - currentTime > 10)
-        {
-            preface.SetActive(false);
-        }
         // Передаёт значения комбинации на экране
         slider1.text = sliders[0].ToString();
         slider2.text = sliders[1].ToString();
