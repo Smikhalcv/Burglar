@@ -19,12 +19,6 @@ public class HollwayTimerScript : MonoBehaviour
         currectTime = Time.time;
     }
 
-    //// При перезапуске страницы смена сцен
-    //private void OnEnable()
-    //{
-    //    currectTime = Time.time;
-    //}
-
     // Update is called once per frame
     void Update()
     {
