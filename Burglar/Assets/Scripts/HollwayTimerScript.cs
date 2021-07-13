@@ -6,24 +6,24 @@ using UnityEngine.UI;
 
 public class HollwayTimerScript : MonoBehaviour
 {
-    [SerializeField] Text timerText;
+    [SerializeField] private Text timerText;
 
     private float currectTime;
-    public int timer;
+    [SerializeField] private int timer;
 
-    [SerializeField] GameObject nextScene;
-    [SerializeField] GameObject currentScene;
+    [SerializeField] private GameObject nextScene;
+    [SerializeField] private GameObject currentScene;
     // Start is called before the first frame update
     void Start()
     {
         currectTime = Time.time;
     }
 
-    // При перезапуске страницы смена сцен
-    private void OnEnable()
-    {
-        currectTime = Time.time;
-    }
+    //// При перезапуске страницы смена сцен
+    //private void OnEnable()
+    //{
+    //    currectTime = Time.time;
+    //}
 
     // Update is called once per frame
     void Update()

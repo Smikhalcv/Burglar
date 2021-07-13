@@ -28,7 +28,6 @@ public class BasementAlarmBoardLockScript : MonoBehaviour
                                             { -1, 0, 1, 0 } 
                                             };
 
-    StateMachine changeScene = new StateMachine();
     
     // Start is called before the first frame update
     void Start()
@@ -36,7 +35,6 @@ public class BasementAlarmBoardLockScript : MonoBehaviour
         NewCombination();
         currentTime = Time.time;
         timeHaking = 60;
-        changeScene.currectScene = sceneCurrent;
     }
 
     /// <summary>
@@ -46,7 +44,6 @@ public class BasementAlarmBoardLockScript : MonoBehaviour
     {
         currentTime = Time.time;
         NewCombination();
-        changeScene.currectScene = sceneCurrent;
     }
 
     // Update is called once per frame
@@ -64,11 +61,8 @@ public class BasementAlarmBoardLockScript : MonoBehaviour
         if (timeHaking - (Time.time - currentTime) < 0)
         {
             NewCombination();
-            //StateMachine changeScene = new StateMachine();
-            //changeScene.currectScene = sceneCurrent;
-            changeScene.ChangeScene(sceneFail);
-            //sceneFail.SetActive(true);
-            //sceneCurrent.SetActive(false);
+            sceneCurrent.SetActive(false);
+            sceneFail.SetActive(true);
         }
     }
 
@@ -88,11 +82,8 @@ public class BasementAlarmBoardLockScript : MonoBehaviour
             {
                 Debug.Log("Вышли за рамки");
                 NewCombination();
-                //StateMachine changeScene = new StateMachine();
-                //changeScene.currectScene = sceneCurrent;
-                changeScene.ChangeScene(sceneFail);
-                //sceneFail.SetActive(true);
-                //sceneCurrent.SetActive(false);
+                sceneCurrent.SetActive(false);
+                sceneFail.SetActive(true);
                 break;
             }
             
@@ -101,11 +92,8 @@ public class BasementAlarmBoardLockScript : MonoBehaviour
         if (sliders[0] == sliders[1] && sliders[1] == sliders[2] && sliders[2] == sliders[3]) 
         {
             NewCombination();
-            //StateMachine changeScene = new StateMachine();
-            //changeScene.currectScene = sceneCurrent;
-            changeScene.ChangeScene(sceneNext);
-            //sceneNext.SetActive(true);
-            //sceneCurrent.SetActive(false);
+            sceneNext.SetActive(true);
+            sceneCurrent.SetActive(false);
         }
     }
 
