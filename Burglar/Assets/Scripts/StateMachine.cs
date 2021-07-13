@@ -30,7 +30,7 @@ public class StateMachine : MonoBehaviour
     public void ChangeScene(GameObject nextScene)
     {
         currectScene.SetActive(false);
-        nextScene.SetActive(true);
         currectScene = nextScene;
+        currectScene.SetActive(true);
     }
 }

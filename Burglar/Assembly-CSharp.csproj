@@ -58,10 +58,11 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ElevatorScript.cs" />
     <Compile Include="Assets\Scripts\BasementAlarmBoardLockScript.cs" />
+    <Compile Include="Assets\Scripts\PuzzleScript.cs" />
     <Compile Include="Assets\Scripts\HollwayTimerScript.cs" />
     <Compile Include="Assets\Scripts\ExitScript.cs" />
     <Compile Include="Assets\Scripts\StateMachine.cs" />
-    <Compile Include="Assets\Scripts\PuzzleScript.cs" />
+    <Compile Include="Assets\Scripts\TimerScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
