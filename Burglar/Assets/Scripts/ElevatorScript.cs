@@ -7,7 +7,6 @@ public class ElevatorScript : MonoBehaviour
 {
     [SerializeField] private GameObject nextScene;
     [SerializeField] private GameObject currentScene;
-
     [SerializeField] private AudioSource openDoorSound;
     [SerializeField] private AudioSource closeDoorSound;
     [SerializeField] private AudioSource elevatorButtonSound;

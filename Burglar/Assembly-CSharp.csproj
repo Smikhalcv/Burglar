@@ -62,6 +62,8 @@
     <Compile Include="Assets\Scripts\HollwayTimerScript.cs" />
     <Compile Include="Assets\Scripts\ExitScript.cs" />
     <Compile Include="Assets\Scripts\StateMachine.cs" />
+    <Compile Include="Assets\Scripts\TimerScript.cs" />
+    <Compile Include="Assets\Scripts\DiscriptionHackScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

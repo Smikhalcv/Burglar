@@ -7240,8 +7240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905b1a8f7a545b94c978934720e5ec1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerText: {fileID: 0}
-  timer: 3
+  limitTime: 5
   nextScene: {fileID: 1874319241}
   currentScene: {fileID: 1442280810}
 --- !u!82 &1442280812
@@ -8068,11 +8067,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1589026065}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 905b1a8f7a545b94c978934720e5ec1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 53a8f8bc6e1533f4c92aa33bc54439ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerText: {fileID: 1451384387}
-  timer: 10
+  limitTimeOutPutText: {fileID: 1451384387}
+  limitTime: 10
   nextScene: {fileID: 1714428043}
   currentScene: {fileID: 1589026065}
 --- !u!1 &1670641161
@@ -8553,11 +8552,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b200ff9defa75d045936605fd266fdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider1: {fileID: 1075049070}
-  slider2: {fileID: 942319111}
-  slider3: {fileID: 1083501460}
-  slider4: {fileID: 581400318}
-  timer: {fileID: 2020841009}
+  valueSlider1: {fileID: 1075049070}
+  valueSlider2: {fileID: 942319111}
+  valueSlider3: {fileID: 1083501460}
+  valueSlider4: {fileID: 581400318}
+  leftTimeText: {fileID: 2020841009}
   sceneFail: {fileID: 1231135378}
   sceneNext: {fileID: 1442280810}
   sceneCurrent: {fileID: 1714428043}
@@ -9387,10 +9386,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: {fileID: 491748654}
   currentScene: {fileID: 1874319241}
-  openDoor: {fileID: 1018052121}
-  closeDoor: {fileID: 1125355972}
-  elevatorButton: {fileID: 2074782552}
-  elevatorMove: {fileID: 2062035092}
+  openDoorSound: {fileID: 1018052121}
+  closeDoorSound: {fileID: 1125355972}
+  elevatorButtonSound: {fileID: 2074782552}
+  elevatorMoveSound: {fileID: 2062035092}
 --- !u!1 &1896010411
 GameObject:
   m_ObjectHideFlags: 0
@@ -9420,11 +9419,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1896010411}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 905b1a8f7a545b94c978934720e5ec1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 53a8f8bc6e1533f4c92aa33bc54439ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerText: {fileID: 1933669081}
-  timer: 10
+  limitTimeOutPutText: {fileID: 1933669081}
+  limitTime: 10
   nextScene: {fileID: 994770410}
   currentScene: {fileID: 1896010411}
 --- !u!114 &1896010413
@@ -9773,11 +9772,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b200ff9defa75d045936605fd266fdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider1: {fileID: 151603446}
-  slider2: {fileID: 152013330}
-  slider3: {fileID: 1210979444}
-  slider4: {fileID: 1489113972}
-  timer: {fileID: 968055371}
+  valueSlider1: {fileID: 151603446}
+  valueSlider2: {fileID: 152013330}
+  valueSlider3: {fileID: 1210979444}
+  valueSlider4: {fileID: 1489113972}
+  leftTimeText: {fileID: 968055371}
   sceneFail: {fileID: 1231135378}
   sceneNext: {fileID: 674997710}
   sceneCurrent: {fileID: 2028093349}

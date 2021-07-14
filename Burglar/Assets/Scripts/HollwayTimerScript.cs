@@ -6,26 +6,25 @@ using UnityEngine.UI;
 
 public class HollwayTimerScript : MonoBehaviour
 {
-    [SerializeField] private Text limitTimeOutPutText;
     [SerializeField] private int limitTime;
     [SerializeField] private GameObject nextScene;
     [SerializeField] private GameObject currentScene;
-    private float startTime;
 
-    void Start()
+    private TimerScript intervalTime = new TimerScript();
+
+    private void OnEnable()
     {
-        startTime = Time.time;
+        intervalTime.startTime = Time.time;
+        intervalTime.intervalTime = limitTime;
     }
 
-    void Update()
+    private void Update()
     {
         // Через определённый промежуток переключает другую сцену
-        if (Time.time - startTime > limitTime)
+        if (intervalTime.LimitTime() <= 0)
         {
             nextScene.SetActive(true);
             currentScene.SetActive(false);
         }
-        // Вывод отсчёта на экран
-        limitTimeOutPutText.text = Math.Round(limitTime - (Time.time - startTime)).ToString();
     }
 }
