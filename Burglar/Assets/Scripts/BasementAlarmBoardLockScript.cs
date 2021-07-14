@@ -6,31 +6,29 @@ using System;
 
 public class BasementAlarmBoardLockScript : MonoBehaviour
 {
-    [SerializeField] Text slider1;
-    [SerializeField] Text slider2;
-    [SerializeField] Text slider3;
-    [SerializeField] Text slider4;
-    [SerializeField] Text timer;
+    [SerializeField] private Text slider1;
+    [SerializeField] private Text slider2;
+    [SerializeField] private Text slider3;
+    [SerializeField] private Text slider4;
+    [SerializeField] private Text timer;
 
-    [SerializeField] GameObject sceneFail;
-    [SerializeField] GameObject sceneNext;
-    [SerializeField] GameObject sceneCurrent;
+    [SerializeField] private GameObject sceneFail;
+    [SerializeField] private GameObject sceneNext;
+    [SerializeField] private GameObject sceneCurrent;
 
-    float currentTime;
-    int timeHaking;
+    private float currentTime;
+    private int timeHaking;
 
-    int[] sliders = new int[4];
+    private int[] sliders = new int[4];
     System.Random rnd = new System.Random();
-    int[,] combinPickLock = new int[4, 4] { 
-                                            { 1, -1, 0, 1 }, 
-                                            { 0, 1, -1, 0 }, 
-                                            { 0, 1, 1, -1 }, 
-                                            { -1, 0, 1, 0 } 
-                                            };
+    private int[,] combinPickLock = new int[4, 4] { 
+                                                    { 1, -1, 0, 1 }, 
+                                                    { 0, 1, -1, 0 }, 
+                                                    { 0, 1, 1, -1 }, 
+                                                    { -1, 0, 1, 0 } 
+                                                    };
 
-    
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         NewCombination();
         currentTime = Time.time;
@@ -46,8 +44,7 @@ public class BasementAlarmBoardLockScript : MonoBehaviour
         NewCombination();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         // Передаёт значения комбинации на экране
         slider1.text = sliders[0].ToString();
@@ -100,7 +97,7 @@ public class BasementAlarmBoardLockScript : MonoBehaviour
     /// <summary>
     /// Создаёт случайные значения для шифра от 2 до 8
     /// </summary>
-    void NewCombination()
+    private void NewCombination()
     {
         for (int i = 0; i < sliders.Length; i++)
         {

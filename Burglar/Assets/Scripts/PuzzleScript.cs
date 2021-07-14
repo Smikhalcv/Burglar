@@ -5,13 +5,12 @@ using UnityEngine.UI;
 
 public class PuzzleScript : MonoBehaviour
 {
-    public Button[] buttons = new Button[9];
-    public Sprite[] buttonColor = new Sprite[2];
+    [SerializeField] private GameObject nextScene;
+    [SerializeField] private GameObject currentScene;
+    [SerializeField] private Button[] buttons = new Button[9];
+    [SerializeField] private Sprite[] buttonColor = new Sprite[2];
 
-    [SerializeField] GameObject nextScene;
-    [SerializeField] GameObject currentScene;
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         // назначает всем кнопкам головоломки первый(красный) цвет
         for (int i = 0; i < buttons.Length; i++)
@@ -20,8 +19,7 @@ public class PuzzleScript : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         // проверяет соблюдения условия решения головоломки
         if (buttons[0].image.sprite == buttonColor[1] &&
