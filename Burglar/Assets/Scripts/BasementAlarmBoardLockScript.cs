@@ -11,22 +11,20 @@ public class BasementAlarmBoardLockScript : MonoBehaviour
     [SerializeField] private Text slider3;
     [SerializeField] private Text slider4;
     [SerializeField] private Text timer;
-
     [SerializeField] private GameObject sceneFail;
     [SerializeField] private GameObject sceneNext;
     [SerializeField] private GameObject sceneCurrent;
-
     private float currentTime;
     private int timeHaking;
-
     private int[] sliders = new int[4];
-    System.Random rnd = new System.Random();
     private int[,] combinPickLock = new int[4, 4] { 
                                                     { 1, -1, 0, 1 }, 
                                                     { 0, 1, -1, 0 }, 
                                                     { 0, 1, 1, -1 }, 
                                                     { -1, 0, 1, 0 } 
                                                     };
+
+    System.Random rnd = new System.Random();
 
     private void Start()
     {
